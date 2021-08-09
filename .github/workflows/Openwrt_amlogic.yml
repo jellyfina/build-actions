@@ -253,8 +253,7 @@ jobs:
       run: |
         echo "### $(date +"%Y年%m月%d号-%H点%M分")" > update_log.txt
         curl -fsSL git.io/file-transfer | sh
-        ./transfer cow --block 2621440 -s -p 64 --no-progress ${FIRMWARE} 2>&1 | tee cowtransfer.log
-        echo "##### 奶牛快传：$(cat cowtransfer.log | grep https | cut -f3 -d" ")" >> update_log.txt
+        echo "##### IP地址：192.168.2.2  账号：root  密码：无" >> update_log.txt
         ./transfer wet -s -p 16 --no-progress ${FIRMWARE} 2>&1 | tee wetransfer.log
         echo "##### WETRANSFER：$(cat wetransfer.log | grep https | cut -f3 -d" ")" >> update_log.txt
     
@@ -264,7 +263,7 @@ jobs:
       with:
         name: ${{ env.CODE }}-${{ env.TARGET_PROFILE }}
         tag: ${{ env.date }}
-        token: ${{ secrets.AutoBuild_x64 }}
+        token: ${{ secrets.actions_jellyfina_op1 }}
         bodyFile: "update_log.txt"
         artifacts: "${{ env.FIRMWARE }}/*"
         
@@ -278,7 +277,7 @@ jobs:
       if: steps.compile.outputs.status == 'success' && env.REGULAR_UPDATE == 'true'
       uses: svenstaro/upload-release-action@v2
       with:
-        repo_token: ${{ secrets.AutoBuild_x64 }}
+        repo_token: ${{ secrets.actions_jellyfina_op1 }}
         file: openwrt/bin/Firmware/*
         tag: AutoUpdate
         overwrite: true
@@ -295,7 +294,7 @@ jobs:
       if: steps.compile.outputs.status == 'success' && env.REGULAR_UPDATE == 'true'
       uses: svenstaro/upload-release-action@v2
       with:
-        repo_token: ${{ secrets.AutoBuild_x64 }}
+        repo_token: ${{ secrets.actions_jellyfina_op1 }}
         file: Github_Tags/*
         tag: AutoUpdate
         overwrite: true
