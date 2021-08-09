@@ -244,7 +244,7 @@ jobs:
     - name: 整理发布信息
       if: steps.organizer.outputs.status == 'success' && env.UPLOAD_RELEASE == 'true'
       run: |
-        echo "### $(date +"%Y年%m月%d号-%H点%M分")" > update_log.txt
+        echo "### 斐讯-N1编译于$(date +"%Y年%m月%d号-%H点%M分")" > update_log.txt
         curl -fsSL git.io/file-transfer | sh
         echo "##### IP地址：192.168.2.2    账号：root  密码：无" >> update_log.txt
         ./transfer wet -s -p 16 --no-progress ${FIRMWARE} 2>&1 | tee wetransfer.log
@@ -254,7 +254,7 @@ jobs:
       uses: ncipollo/release-action@v1
       if: steps.organizer.outputs.status == 'success' && env.UPLOAD_RELEASE == 'true'
       with:
-        name: ${{ env.CODE }}-${{ env.TARGET_PROFILE }}
+        name: s905d${{ env.CODE }}-${{ env.TARGET_PROFILE }}
         tag: ${{ env.date }}
         token: ${{ secrets.actions_jellyfina_op1 }}
         bodyFile: "update_log.txt"
