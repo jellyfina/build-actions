@@ -247,9 +247,10 @@ jobs:
       run: |
         echo "### $(date +"%Y年%m月%d号-%H点%M分")" > update_log.txt
         curl -fsSL git.io/file-transfer | sh
+        echo "##### IP地址：192.168.2.3  账号：root  密码：无" >> update_log.txt
         ./transfer wet -s -p 16 --no-progress ${FIRMWARE} 2>&1 | tee wetransfer.log
         echo "##### WETRANSFER：$(cat wetransfer.log | grep https | cut -f3 -d" ")" >> update_log.txt
-        echo "##### TEST" >> update_log.txt
+        
     
     - name: 发布固件
       uses: ncipollo/release-action@v1
@@ -257,7 +258,7 @@ jobs:
       with:
         name: ${{ env.CODE }}-${{ env.TARGET_PROFILE }}
         tag: ${{ env.date }}
-        token: ${{ secrets.AutoBuild_x64 }}
+        token: ${{ secrets.actions_jellyfina_op1 }}
         bodyFile: "update_log.txt"
         artifacts: "${{ env.FIRMWARE }}/*"
         
@@ -271,7 +272,7 @@ jobs:
       if: steps.compile.outputs.status == 'success' && env.REGULAR_UPDATE == 'true'
       uses: svenstaro/upload-release-action@v2
       with:
-        repo_token: ${{ secrets.AutoBuild_x64 }}
+        repo_token: ${{ secrets.actions_jellyfina_op1 }}
         file: openwrt/bin/Firmware/*
         tag: AutoUpdate
         overwrite: true
@@ -288,13 +289,8 @@ jobs:
       if: steps.compile.outputs.status == 'success' && env.REGULAR_UPDATE == 'true'
       uses: svenstaro/upload-release-action@v2
       with:
-        repo_token: ${{ secrets.AutoBuild_x64 }}
+        repo_token: ${{ secrets.actions_jellyfina_op1 }}
         file: Github_Tags/*
         tag: AutoUpdate
         overwrite: true
         file_glob: true
-
-    - name: 电报机器人信息通知
-      if: steps.organizer.outputs.status == 'success' && env.SERVERCHAN_SCKEY == 'true'
-      run: |
-        curl -k --data chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" --data "text=我亲爱的✨主人✨：您使用【${{matrix.target}}】文件夹编译的[${{ env.CODE }}-${{ env.TARGET_PROFILE }}]固件(${{env.CangKu}}仓库的#${{env.Run_number}}号)顺利编译完成了！💐" "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage"
