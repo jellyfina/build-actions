@@ -19,7 +19,7 @@ EOF
 
 # 版本号里显示一个自己的名字（jellyfin build $(TZ=UTC-8 date "+%Y.%m.%d") @ 这些都是后增加的）
 # sed -i 's/OpenWrt /jellyfin build $(TZ=UTC-8 date "%Y-%m-%d") @ OpenWrt /g' openwrt/package/lean/default-settings/files/zzz-default-settings
-sed -i "s/OpenWrt /jellyfin build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
+sed -i "s/OpenWrt /jellyfin Compiled in $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
 #sed -i "s/OpenWrt /jellyfin Compiled in $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" $ZZZ
 # 修改机器名称
 #sed -i 's/OpenWrt/jellyfin/g' package/base-files/files/bin/config_generate
@@ -69,8 +69,8 @@ rm -rf ./feeds/packages/net/zerotier                    # 删除zerotier内网�
 rm -rf ./package/lean/luci-app-zerotier                 # 删除zerotier内网穿透
 rm -rf ./package/lean/luci-app-unblockmusic             # 删除网易云音乐解锁
 rm -rf ./package/lean/UnblockNeteaseMusic-Go            # 删除网易云音乐解锁
-# rm -rf ./package/lean/adbyby                            # 删除广告大师
-# rm -rf ./package/lean/luci-app-adbyby-plus              # 删除广告大师
+rm -rf ./package/lean/adbyby                            # 删除广告大师
+rm -rf ./package/lean/luci-app-adbyby-plus              # 删除广告大师
 rm -rf ./package/lean/luci-app-xlnetacc                 # 删除迅雷快鸟
 rm -rf ./package/lean/uugamebooster                     # 删除UU游戏加速
 rm -rf ./package/lean/luci-app-uugamebooster            # 删除UU游戏加速
