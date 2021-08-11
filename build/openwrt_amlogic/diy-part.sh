@@ -57,11 +57,11 @@ sed -i 's/LUCI_DEPENDS.*/LUCI_DEPENDS:=\@\(arm\|\|aarch64\)/g' package/lean/luci
 # luci-app-adguardhome
 rm -rf ./feeds/luci/applications/luci-app-adguardhome
 git clone https://github.com/skycn3322/luci-app-adguardhome.git package/adguardhome
+git clone --depth=1 -b 18.06 https://github.com/kiddin9/luci-theme-edge package/luci-theme-edge
 # 为 armvirt 添加 autocore 支持
 sed -i 's/TARGET_rockchip/TARGET_rockchip\|\|TARGET_armvirt/g' package/lean/autocore/Makefile
 # 增加防火墙规则
 echo "iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE" >> package/network/config/firewall/files/firewall.user
-git clone https://github.com/kiddin9/luci-theme-edge.git package/edge
 # 删除默认插件
 rm -rf ./feeds/luci/applications/luci-app-upnp
 rm -rf ./feeds/luci/applications/luci-app-wol
@@ -72,7 +72,7 @@ rm -rf ./package/lean/luci-app-vsftpd
 
 # 修改插件名字
 sed -i 's/"aMule设置"/"电驴下载"/g' `grep "aMule设置" -rl ./`
-sed -i 's/"网络存储"/"NAS"/g' `grep "网络存储" -rl ./`
+sed -i 's/"网络存储"/"存储"/g' `grep "网络存储" -rl ./`
 sed -i 's/"Turbo ACC 网络加速"/"网络加速"/g' `grep "Turbo ACC 网络加速" -rl ./`
 sed -i 's/"实时流量监测"/"流量"/g' `grep "实时流量监测" -rl ./`
 sed -i 's/"KMS 服务器"/"KMS激活"/g' `grep "KMS 服务器" -rl ./`
