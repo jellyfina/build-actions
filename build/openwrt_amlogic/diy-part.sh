@@ -54,10 +54,6 @@ done
 
 # luci-app-cpufreq修改一些代码适配amlogic
 sed -i 's/LUCI_DEPENDS.*/LUCI_DEPENDS:=\@\(arm\|\|aarch64\)/g' package/lean/luci-app-cpufreq/Makefile
-# luci-app-adguardhome
-rm -rf ./feeds/luci/applications/luci-app-adguardhome
-git clone https://github.com/skycn3322/luci-app-adguardhome.git package/adguardhome
-git clone --depth=1 -b 18.06 https://github.com/kiddin9/luci-theme-edge package/luci-theme-edge
 git clone https://github.com/brvphoenix/luci-app-wrtbwmon.git package/luci-app-wrtbwmon
 # 为 armvirt 添加 autocore 支持
 sed -i 's/TARGET_rockchip/TARGET_rockchip\|\|TARGET_armvirt/g' package/lean/autocore/Makefile
