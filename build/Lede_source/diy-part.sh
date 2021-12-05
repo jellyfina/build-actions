@@ -69,6 +69,7 @@ rm -rf ./feeds/packages/net/zerotier                    # 删除zerotier内网�
 rm -rf ./package/lean/luci-app-zerotier                 # 删除zerotier内网穿透
 rm -rf ./package/lean/luci-app-unblockmusic             # 删除网易云音乐解锁
 rm -rf ./package/lean/UnblockNeteaseMusic-Go            # 删除网易云音乐解锁
+rm -rf ./feeds/luci/applications/luci-app-unblockmusic  # 删除网易云音乐解锁
 rm -rf ./package/lean/adbyby                            # 删除广告大师
 rm -rf ./package/lean/luci-app-adbyby-plus              # 删除广告大师
 rm -rf ./package/lean/luci-app-xlnetacc                 # 删除迅雷快鸟
@@ -79,6 +80,7 @@ rm -rf ./package/lean/luci-app-vlmcsd
 rm -rf ./package/lean/vsftpd-alt
 rm -rf ./package/lean/luci-app-vsftpd
 rm -rf ./feeds/luci/applications/luci-app-autoupdate
+rm -rf ./package/lean/luci-app-ttyd
 
 # 自定义插件
 sed -i '$a src-git serverchan https://github.com/tty228/luci-app-serverchan' feeds.conf.defaul
