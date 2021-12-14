@@ -81,8 +81,8 @@ rm -rf ./package/lean/vsftpd-alt
 rm -rf ./package/lean/luci-app-vsftpd
 rm -rf ./feeds/luci/applications/luci-app-autoupdate
 rm -rf ./package/lean/luci-app-ttyd
-rm -rf ./package/lean/luci-app-dockerman        # 删除大雕docker
-rm -rf ./package/lean/luci-lib-docker           # 删除大雕docker
+# rm -rf ./package/lean/luci-app-dockerman        # 删除大雕docker
+# rm -rf ./package/lean/luci-lib-docker           # 删除大雕docker
 
 # 自定义插件
 sed -i '$a src-git serverchan https://github.com/tty228/luci-app-serverchan' feeds.conf.defaul
