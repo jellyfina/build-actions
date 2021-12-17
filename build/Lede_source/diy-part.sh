@@ -81,6 +81,7 @@ rm -rf ./package/lean/vsftpd-alt
 rm -rf ./package/lean/luci-app-vsftpd
 rm -rf ./feeds/luci/applications/luci-app-autoupdate
 rm -rf ./package/lean/luci-app-ttyd
+rm -rf ./package/lean/luci-app-turboacc
 rm -rf ./feeds/packages/utils/docker
 rm -rf ./feeds/packages/utils/dockerd
 # rm -rf ./package/lean/luci-app-dockerman        # 删除大雕docker
