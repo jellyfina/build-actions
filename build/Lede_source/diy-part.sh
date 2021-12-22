@@ -65,8 +65,8 @@ rm -rf ./feeds/luci/applications/luci-app-wol           # 删除wol网络唤醒
 rm -rf ./package/lean/luci-app-qbittorrent              # 删除qbittorrent
 rm -rf ./package/lean/qBittorrent-static                # 删除qbittorrent
 rm -rf ./package/lean/luci-app-qbittorrent_static       # 删除qbittorrent
-rm -rf ./feeds/packages/net/zerotier                    # 删除zerotier内网穿透
-# rm -rf ./package/lean/luci-app-zerotier                 # 删除zerotier内网穿透
+# rm -rf ./feeds/packages/net/zerotier                    # 删除zerotier内网穿透
+rm -rf ./package/lean/luci-app-zerotier                 # 删除zerotier内网穿透
 rm -rf ./package/lean/luci-app-unblockmusic             # 删除网易云音乐解锁
 rm -rf ./package/lean/UnblockNeteaseMusic-Go            # 删除网易云音乐解锁
 rm -rf ./feeds/luci/applications/luci-app-unblockmusic  # 删除网易云音乐解锁
