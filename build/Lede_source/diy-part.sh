@@ -84,8 +84,8 @@ rm -rf ./feeds/luci/applications/luci-app-autoupdate
 # rm -rf ./package/lean/luci-app-turboacc
 # rm -rf ./feeds/packages/utils/docker
 # rm -rf ./feeds/packages/utils/dockerd
-rm -rf ./package/lean/luci-app-dockerman        # 删除大雕docker
-rm -rf ./package/lean/luci-lib-docker           # 删除大雕docker
+# rm -rf ./package/lean/luci-app-dockerman        # 删除大雕docker
+# rm -rf ./package/lean/luci-lib-docker           # 删除大雕docker
 
 # 自定义插件
 sed -i '$a src-git serverchan https://github.com/tty228/luci-app-serverchan' feeds.conf.defaul
