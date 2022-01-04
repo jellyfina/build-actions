@@ -61,7 +61,7 @@ rm -rf ./feeds/luci/applications/luci-app-aria2         # 删除aria2
 # rm -rf ./feeds/luci/applications/luci-app-upnp          # 删除upnp自动端口映射
 rm -rf ./feeds/luci/applications/luci-app-wol           # 删除wol网络唤醒
 # rm -rf ./feeds/luci/applications/luci-app-nlbwmon       # 删除nlbwmon流量监控
-# rm -rf ./package/lean/luci-app-pptp-server              # 删除PPTP-VPN服务端
+rm -rf ./package/lean/luci-app-pptp-server              # 删除PPTP-VPN服务端
 rm -rf ./package/lean/luci-app-qbittorrent              # 删除qbittorrent
 rm -rf ./package/lean/qBittorrent-static                # 删除qbittorrent
 rm -rf ./package/lean/luci-app-qbittorrent_static       # 删除qbittorrent
