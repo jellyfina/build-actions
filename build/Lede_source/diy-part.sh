@@ -71,7 +71,7 @@ rm -rf ./package/lean/luci-app-unblockmusic             # 删除网易云音乐�
 rm -rf ./package/lean/UnblockNeteaseMusic-Go            # 删除网易云音乐解锁
 rm -rf ./feeds/luci/applications/luci-app-unblockmusic  # 删除网易云音乐解锁
 rm -rf ./package/lean/adbyby                            # 删除广告大师
-# rm -rf ./package/lean/luci-app-adbyby-plus              # 删除广告大师
+rm -rf ./package/lean/luci-app-adbyby-plus              # 删除广告大师
 rm -rf ./package/lean/luci-app-xlnetacc                 # 删除迅雷快鸟
 rm -rf ./package/lean/uugamebooster                     # 删除UU游戏加速
 rm -rf ./package/lean/luci-app-uugamebooster            # 删除UU游戏加速
