@@ -30,6 +30,8 @@ sed -i '/ip6assign/d' package/base-files/files/bin/config_generate
 rm -rf ../lean/luci-theme-argon
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
 git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
+rm -rf ../lean/luci-theme-neobird
+svn co https://github.com/thinktip/luci-theme-neobird/trunk feeds/luci/themes/luci-theme-neobird
 
                                                 
 # 选择edge为默认主题
