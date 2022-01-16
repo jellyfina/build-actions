@@ -106,7 +106,7 @@ filters:
   name: 合并乘风
   id: 1628155120
 - enabled: true
-  url: https://banbendalao.coding.net/p/adgk/d/ADgk/git/raw/master/ADgk.txt
+  url: https://raw.githubusercontent.com/banbendalao/ADgk/master/ADgk.txt
   name: adgk手机去广告规则
   id: 1628155121
 - enabled: true
