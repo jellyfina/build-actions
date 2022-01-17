@@ -42,7 +42,7 @@ sed -i "/commit luci/i\uci set luci.main.mediaurlbase='/luci-static/argon'" pack
 #sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0/$1$PhflQnJ1$yamWfH5Mphs4hXV7UXWQ21:18725/g' $ZZZ          
 
 # 设置密码为空（安装固件时无需密码登陆，然后自己修改想要的密码）
-sed -i '/CYXluq4wUazHjmCDBCqXF/d' $ZZZ
+# sed -i '/CYXluq4wUazHjmCDBCqXF/d' $ZZZ
 
 # 修改内核版本为5.4
 sed -i 's/PATCHVER:=5.10/PATCHVER:=5.15/g' target/linux/x86/Makefile                          
