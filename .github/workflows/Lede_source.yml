@@ -66,6 +66,8 @@ jobs:
         echo
         git clone --depth 1 -b main https://github.com/jellyfina/common build/common > /dev/null 2>&1
         chmod -R +x "${GITHUB_WORKSPACE}/build/common"
+        echo "NETIP=package/base-files/files/etc/networkip" >> $GITHUB_ENV
+        echo "DELETE=package/base-files/files/etc/deletefile" >> $GITHUB_ENV
         if [[ "${REPO_BRANCH}" == "master" ]]; then
           echo "ZZZ=package/lean/default-settings/files/zzz-default-settings" >> $GITHUB_ENV
           echo "CODE=Lede" >> $GITHUB_ENV
@@ -79,12 +81,6 @@ jobs:
           echo "CODE=Mortal" >> $GITHUB_ENV
           echo "OpenWrt_name=21.02" >> $GITHUB_ENV
         fi
-        echo "NETIP=package/base-files/files/etc/networkip" >> $GITHUB_ENV
-#        if [ -n "$(ls -A build/common/0809gg 2>/dev/null)" ]; then
-#          source build/common/common.sh && Diy_gonggao
-#        else
-#          source build/common/common.sh && Diy_tongzhi
-#        fi
 
     - name: 部署编译环境
       env:
