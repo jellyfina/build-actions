@@ -12,9 +12,9 @@ uci set network.lan.broadcast='192.168.2.254'                               # IP
 uci set network.lan.dns='223.6.6.6'                                         # DNS(多个DNS要用空格分开)
 uci set network.lan.delegate='0'                                            # 去掉LAN口使用内置的 IPv6 管理
 uci commit network                                                          # 不要删除跟注释,除非上面全部删除或注释掉了
-# uci set dhcp.lan.ignore='1'                                                 # 关闭DHCP功能
-# uci commit dhcp                                                             # 跟‘关闭DHCP功能’联动,同时启用或者删除跟注释
-uci set system.@system[0].hostname='OpenWrt'                               # 修改主机名称为OpenWrt
+uci set dhcp.lan.ignore='1'                                                 # 关闭DHCP功能
+uci commit dhcp                                                             # 跟‘关闭DHCP功能’联动,同时启用或者删除跟注释
+uci set system.@system[0].hostname='OpenWrt'                                # 修改主机名称为OpenWrt
 EOF
 
 # 版本号里显示一个自己的名字（jellyfin build $(TZ=UTC-8 date "+%Y.%m.%d") @ 这些都是后增加的）
@@ -29,7 +29,6 @@ sed -i '/ip6assign/d' package/base-files/files/bin/config_generate
 # 添加新版argon主题
 rm -rf ../lean/luci-theme-argon
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
-git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
 git clone --depth=1 -b 18.06 https://github.com/kiddin9/luci-theme-edge package/luci-theme-edge
 rm -rf ../lean/luci-theme-neobird
 svn co https://github.com/thinktip/luci-theme-neobird/trunk feeds/luci/themes/luci-theme-neobird
