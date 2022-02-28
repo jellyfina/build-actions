@@ -17,18 +17,14 @@ uci commit dhcp                                                             # �
 uci set system.@system[0].hostname='OpenWrt'                                # 修改主机名称为OpenWrt
 EOF
 
-# 版本号里显示一个自己的名字（jellyfin build $(TZ=UTC-8 date "+%Y.%m.%d") @ 这些都是后增加的）
-# sed -i 's/OpenWrt /jellyfin build $(TZ=UTC-8 date "%Y-%m-%d") @ OpenWrt /g' openwrt/package/lean/default-settings/files/zzz-default-settings
+# 版本号里显示一个自己的名字
 sed -i "s/OpenWrt /jellyfin Compiled in $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
-#sed -i "s/OpenWrt /jellyfin Compiled in $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" $ZZZ
-# 修改机器名称
-#sed -i 's/OpenWrt/jellyfin/g' package/base-files/files/bin/config_generate
 # 关闭IPv6 分配长度
 sed -i '/ip6assign/d' package/base-files/files/bin/config_generate
 
 # 添加新版argon主题
 rm -rf ../lean/luci-theme-argon
-git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
+git clone --depth=1 -b 18.06 https://github.com/jellyfina/luci-theme-argon
 git clone --depth=1 -b 18.06 https://github.com/kiddin9/luci-theme-edge package/luci-theme-edge
 rm -rf ../lean/luci-theme-neobird
 svn co https://github.com/thinktip/luci-theme-neobird/trunk feeds/luci/themes/luci-theme-neobird
