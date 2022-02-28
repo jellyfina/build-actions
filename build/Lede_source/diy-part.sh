@@ -75,7 +75,7 @@ rm -rf ./package/lean/UnblockNeteaseMusic-Go            # 删除网易云音乐�
 rm -rf ./feeds/luci/applications/luci-app-unblockmusic  # 删除网易云音乐解锁
 rm -rf ./package/lean/adbyby                            # 删除广告大师
 rm -rf ./package/lean/luci-app-adbyby-plus              # 删除广告大师
-rm -rf ./feeds/luci/applications/luci-app-adbyby-plus # 删除广告大师
+rm -rf ./feeds/luci/applications/luci-app-adbyby-plus   # 删除广告大师
 rm -rf ./package/lean/luci-app-xlnetacc                 # 删除迅雷快鸟
 rm -rf ./feeds/luci/applications/luci-app-xlnetacc      # 删除迅雷快鸟
 rm -rf ./package/lean/uugamebooster                     # 删除UU游戏加速
@@ -84,13 +84,13 @@ rm -rf ./package/lean/luci-app-uugamebooster            # 删除UU游戏加速
 # rm -rf ./package/lean/luci-app-vlmcsd
 # rm -rf ./package/lean/vsftpd-alt
 # rm -rf ./package/lean/luci-app-vsftpd
-rm -rf ./feeds/luci/applications/luci-app-autoupdate
+# rm -rf ./feeds/luci/applications/luci-app-autoupdate  # 删除在线升级
 # rm -rf ./package/lean/luci-app-ttyd
 # rm -rf ./package/lean/luci-app-turboacc
 # rm -rf ./feeds/packages/utils/docker
 # rm -rf ./feeds/packages/utils/dockerd
-# rm -rf ./package/lean/luci-app-dockerman        # 删除大雕docker
-# rm -rf ./package/lean/luci-lib-docker           # 删除大雕docker
+# rm -rf ./package/lean/luci-app-dockerman              # 删除大雕docker
+# rm -rf ./package/lean/luci-lib-docker                 # 删除大雕docker
 
 # 自定义插件
 sed -i '$a src-git serverchan https://github.com/tty228/luci-app-serverchan' feeds.conf.defaul
