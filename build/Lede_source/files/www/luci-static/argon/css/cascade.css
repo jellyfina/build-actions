@@ -358,7 +358,7 @@ hr {
   background: transparent;
 }
 .login-page .login-container .login-form {
-  display: flex;
+  display: contents;
   flex-direction: column;
   -webkit-box-align: center;
   align-items: center;
@@ -371,7 +371,7 @@ hr {
   background-color: var(--white);
 }
 .login-page .login-container .login-form .brand {
-  display: flex;
+  display: none;
   -webkit-box-align: center;
   align-items: center;
   margin: 50px auto -20px 50px;
@@ -393,7 +393,7 @@ hr {
 }
 .login-page .login-container .login-form .form-login {
   width: 100%;
-  padding: 20px 50px;
+  padding: 45px 50px;
   box-sizing: border-box;
 }
 .login-page .login-container .login-form .form-login .errorbox {
