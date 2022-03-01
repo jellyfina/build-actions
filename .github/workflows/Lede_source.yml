@@ -241,7 +241,7 @@ jobs:
       run: |
         echo "### $(date +"%Y年%m月%d号-%H点%M分")" > update_log.txt
         curl -fsSL git.io/file-transfer | sh
-        echo "##### IP地址：192.168.2.3    账号：root  密码：无" >> update_log.txt
+        echo "##### IP地址：192.168.2.3    账号：root  密码：password" >> update_log.txt
         ./transfer wet -s -p 16 --no-progress ${FIRMWARE} 2>&1 | tee wetransfer.log
         echo "##### WETRANSFER：$(cat wetransfer.log | grep https | cut -f3 -d" ")" >> update_log.txt
         
