@@ -87,6 +87,7 @@ rm -rf ./package/lean/luci-app-uugamebooster            # 删除UU游戏加速
 # rm -rf ./feeds/packages/utils/dockerd
 # rm -rf ./package/lean/luci-app-dockerman              # 删除大雕docker
 # rm -rf ./package/lean/luci-lib-docker                 # 删除大雕docker
+rm -rf ./feeds/packages/utils/gzip                      # 去掉gzip,让固件支持自动升级
 
 # 自定义插件
 sed -i '$a src-git serverchan https://github.com/tty228/luci-app-serverchan' feeds.conf.defaul
