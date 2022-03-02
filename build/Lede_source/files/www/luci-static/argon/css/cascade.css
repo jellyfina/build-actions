@@ -2503,7 +2503,7 @@ span[data-tooltip] .label {
   text-transform: uppercase;
   color: #32ccbc !important;
   border-radius: 3px;
-  background-color: #bfbfbf;
+  background-color: #FFD0FF;
   text-shadow: none;
 }
 label > input[type="checkbox"],
