@@ -24,7 +24,8 @@ sed -i '/ip6assign/d' package/base-files/files/bin/config_generate
 
 # 添加新版argon主题
 rm -rf ../lean/luci-theme-argon
-# rm -rf ..feeds/luci/themes/luci-theme-argon
+rm -rf ..feeds/luci/themes/luci-theme-argon
+git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 # git clone --depth=1 -b 18.06 https://github.com/jellyfina/luci-theme-argon package/luci-theme-argon
 git clone --depth=1 -b 18.06 https://github.com/kiddin9/luci-theme-edge package/luci-theme-edge
 # rm -rf ../lean/luci-theme-neobird
