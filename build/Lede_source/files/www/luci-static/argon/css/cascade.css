@@ -3290,7 +3290,7 @@ pre.command-output {
     display: none;
   }
   .login-page .login-container {
-    margin-left: 0rem !important;
+    margin-left: auto !important;
     width: 80%;
   }
   .login-page .login-container .login-form .form-login .input-group::before {
