@@ -96,6 +96,20 @@ sed -i '$a src-git serverchan https://github.com/tty228/luci-app-serverchan' fee
 # 增加防火墙规则
 echo "iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE" >> package/network/config/firewall/files/firewall.user
 
+# 整理固件包时候,删除您不想要的固件或者文件,让它不需要上传到Actions空间（根据编译机型变化,自行调整需要删除的固件名称）
+cat >${GITHUB_WORKSPACE}/Clear <<-EOF
+rm -rf packages
+# rm -rf config.buildinfo
+rm -rf feeds.buildinfo
+rm -rf openwrt-x86-64-generic-kernel.bin
+rm -rf openwrt-x86-64-generic.manifest
+rm -rf openwrt-x86-64-generic-squashfs-rootfs.img.gz
+rm -rf openwrt-x86-64-generic-squashfs-combined-efi.vmdk
+rm -rf openwrt-x86-64-generic-squashfs-combined.vmdk
+rm -rf sha256sums
+rm -rf version.buildinfo
+EOF
+
 # 修改插件名字
 #sed -i 's/"aMule设置"/"电驴下载"/g' `grep "aMule设置" -rl ./`
 sed -i 's/"网络存储"/"存储"/g' `grep "网络存储" -rl ./`
