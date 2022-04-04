@@ -32,9 +32,9 @@ git clone --depth=1 -b 18.06 https://github.com/kiddin9/luci-theme-edge package/
 # svn co https://github.com/thinktip/luci-theme-neobird/trunk feeds/luci/themes/luci-theme-neobird
 
                                                 
-# 选择edge为默认主题
+# 设置默认主题
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
-sed -i "/commit luci/i\uci set luci.main.mediaurlbase='/luci-static/argon'" package/lean/default-settings/files/zzz-default-settings
+# sed -i "/commit luci/i\uci set luci.main.mediaurlbase='/luci-static/argon'" package/lean/default-settings/files/zzz-default-settings
 
 # 替换密码（要替换密码就不能设置密码为空）
 #sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0/$1$PhflQnJ1$yamWfH5Mphs4hXV7UXWQ21:18725/g' $ZZZ          
