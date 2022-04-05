@@ -18,7 +18,7 @@ uci set system.@system[0].hostname='OpenWrt'                                # �
 EOF
 
 # 版本号里显示一个自己的名字
-#sed -i "s/OpenWrt /jellyfin Compiled in $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
+sed -i "s/OpenWrt /jellyfin Compiled in $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
 # 关闭IPv6 分配长度
 sed -i '/ip6assign/d' package/base-files/files/bin/config_generate
 
