@@ -204,7 +204,7 @@ jobs:
       if: steps.organizer.outputs.status == 'success' && env.UPLOAD_RELEASE == 'true' && env.REPO_TOKEN
       uses: ncipollo/release-action@v1
       with:
-        name: ${{ env.SOURCE }}-${{ env.TARGET_PROFILE }}
+        name: ${{ env.Upgrade_Date }}-${{ env.SOURCE }}-${{ env.TARGET_PROFILE }}
         tag: ${{ env.date }}
         token: ${{ secrets.actions_jellyfina_op1 }}
         bodyFile: "update_log.txt"
