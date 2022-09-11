@@ -66,6 +66,9 @@ rm -rf ./package/lean/luci-app-qbittorrent              # 删除qbittorrent
 rm -rf ./package/lean/qBittorrent-static                # 删除qbittorrent
 rm -rf ./package/lean/luci-app-qbittorrent_static       # 删除qbittorrent
 rm -rf ./feeds/packages/net/zerotier                    # 删除zerotier内网穿透
+rm -rf ./feeds/luci/applications/luci-app-zerotier
+rm -rf ./feeds/luci/applications/luci-app-upnp
+rm -rf ./feeds/luci/applications/luci-app-upnp
 rm -rf ./package/lean/luci-app-zerotier                 # 删除zerotier内网穿透
 rm -rf ./package/lean/luci-app-unblockmusic             # 删除网易云音乐解锁
 rm -rf ./package/lean/UnblockNeteaseMusic-Go            # 删除网易云音乐解锁
@@ -83,7 +86,9 @@ rm -rf ./package/lean/luci-app-uugamebooster            # 删除UU游戏加速
 # rm -rf ./package/lean/luci-app-vsftpd
 rm -rf ./feeds/luci/applications/luci-app-autoupdate  # 删除在线升级
 rm -rf ./package/luci-app-autoupdate
+# rm -rf ./package/luci-app-autoupdate
 rm -rf ./package/lean/luci-app-ttyd
+rm -rf ./feeds/luci/applications/luci-app-ttyd
 # rm -rf ./package/lean/luci-app-turboacc
 # rm -rf ./feeds/packages/utils/docker
 # rm -rf ./feeds/packages/utils/dockerd
