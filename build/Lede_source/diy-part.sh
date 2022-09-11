@@ -69,6 +69,7 @@ rm -rf ./feeds/packages/net/zerotier                    # 删除zerotier内网�
 rm -rf ./feeds/luci/applications/luci-app-zerotier
 rm -rf ./feeds/luci/applications/luci-app-upnp
 rm -rf ./feeds/luci/applications/luci-app-ipsec-vpnd
+rm -rf ./feeds/luci/applications/luci-app-filetransfer
 # rm -rf ./feeds/luci/applications/luci-app-autoupdate
 # rm -rf ./feeds/luci/applications/luci-app-upnp
 rm -rf ./package/lean/luci-app-zerotier                 # 删除zerotier内网穿透
