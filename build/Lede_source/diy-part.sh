@@ -82,6 +82,7 @@ rm -rf ./package/lean/luci-app-uugamebooster            # 删除UU游戏加速
 # rm -rf ./package/lean/vsftpd-alt
 # rm -rf ./package/lean/luci-app-vsftpd
 rm -rf ./feeds/luci/applications/luci-app-autoupdate  # 删除在线升级
+rm -rf ./package/luci-app-autoupdate
 rm -rf ./package/lean/luci-app-ttyd
 # rm -rf ./package/lean/luci-app-turboacc
 # rm -rf ./feeds/packages/utils/docker
