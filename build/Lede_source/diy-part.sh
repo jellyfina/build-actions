@@ -83,8 +83,8 @@ rm -rf ./feeds/luci/applications/luci-app-autoupdate  # 删除在线升级
 rm -rf ./package/luci-app-autoupdate
 rm -rf ./package/lean/luci-app-ttyd
 rm -rf ./feeds/luci/applications/luci-app-ttyd
-rm -rf ./feeds/packages/net/samba4
-rm -rf ./feeds/luci/applications/luci-app-samba4
+# rm -rf ./feeds/packages/net/samba4
+# rm -rf ./feeds/luci/applications/luci-app-samba4
 rm -rf ./feeds/packages/utils/gzip                      # 去掉gzip,让固件支持自动升级
 
 # 自定义插件
