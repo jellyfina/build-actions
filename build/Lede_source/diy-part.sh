@@ -51,16 +51,10 @@ sed -i 's/PATCHVER:=5.10/PATCHVER:=5.15/g' target/linux/x86/Makefile
 #sed -i '$a src-git kenzok https://github.com/kenzok8/openwrt-packages' feeds.conf.default           # 常用插件源
 #sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default                       # 常用插件源_依赖安装
 # 删除自带插件
-# rm -rf ./feeds/kenzok/luci-app-ssr-plus               # 删除SSR-PLUS
-# rm -rf ./feeds/garypang/luci-app-ssr-plus             # 删除SSR-PLUS
-# rm -rf ./package/luci-app-ssr-plus/luci-app-ssr-plus  # 删除SSR-PLUS
 rm -rf ./feeds/packages/net/aria2                       # 删除aria2
 rm -rf ./feeds/packages/net/ariang                      # 删除aria2
 rm -rf ./feeds/luci/applications/luci-app-aria2         # 删除aria2
-# rm -rf ./feeds/luci/applications/luci-app-samba         # 删除samba 不能与samba4同时编译
-# rm -rf ./feeds/luci/applications/luci-app-upnp          # 删除upnp自动端口映射
 rm -rf ./feeds/luci/applications/luci-app-wol           # 删除wol网络唤醒
-# rm -rf ./feeds/luci/applications/luci-app-nlbwmon       # 删除nlbwmon流量监控
 rm -rf ./package/lean/luci-app-pptp-server              # 删除PPTP-VPN服务端
 rm -rf ./package/lean/luci-app-qbittorrent              # 删除qbittorrent
 rm -rf ./package/lean/qBittorrent-static                # 删除qbittorrent
@@ -70,12 +64,10 @@ rm -rf ./feeds/luci/applications/luci-app-zerotier
 rm -rf ./feeds/luci/applications/luci-app-upnp
 rm -rf ./feeds/luci/applications/luci-app-ipsec-vpnd
 rm -rf ./feeds/luci/applications/luci-app-filetransfer
-# rm -rf ./feeds/luci/applications/luci-app-autoupdate
 rm -rf ./feeds/luci/applications/luci-app-nlbwmon
 rm -rf ./feeds/packages/net/nlbwmon
 rm -rf ./feeds/danshui/luci-app-wrtbwmon
 rm -rf ./feeds/danshui/wrtbwmon
-# rm -rf ./feeds/luci/applications/luci-app-upnp
 rm -rf ./package/lean/luci-app-zerotier                 # 删除zerotier内网穿透
 rm -rf ./package/lean/luci-app-unblockmusic             # 删除网易云音乐解锁
 rm -rf ./package/lean/UnblockNeteaseMusic-Go            # 删除网易云音乐解锁
@@ -87,22 +79,12 @@ rm -rf ./package/lean/luci-app-xlnetacc                 # 删除迅雷快鸟
 rm -rf ./feeds/luci/applications/luci-app-xlnetacc      # 删除迅雷快鸟
 rm -rf ./package/lean/uugamebooster                     # 删除UU游戏加速
 rm -rf ./package/lean/luci-app-uugamebooster            # 删除UU游戏加速
-# rm -rf ././package/lean/vlmcsd
-# rm -rf ./package/lean/luci-app-vlmcsd
-# rm -rf ./package/lean/vsftpd-alt
-# rm -rf ./package/lean/luci-app-vsftpd
 rm -rf ./feeds/luci/applications/luci-app-autoupdate  # 删除在线升级
 rm -rf ./package/luci-app-autoupdate
-# rm -rf ./package/luci-app-autoupdate
 rm -rf ./package/lean/luci-app-ttyd
 rm -rf ./feeds/luci/applications/luci-app-ttyd
 rm -rf ./feeds/packages/net/samba4
 rm -rf ./feeds/luci/applications/luci-app-samba4
-# rm -rf ./package/lean/luci-app-turboacc
-# rm -rf ./feeds/packages/utils/docker
-# rm -rf ./feeds/packages/utils/dockerd
-# rm -rf ./package/lean/luci-app-dockerman              # 删除大雕docker
-# rm -rf ./package/lean/luci-lib-docker                 # 删除大雕docker
 rm -rf ./feeds/packages/utils/gzip                      # 去掉gzip,让固件支持自动升级
 
 # 自定义插件
