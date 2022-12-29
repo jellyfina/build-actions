@@ -43,7 +43,7 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/M
 # sed -i '/CYXluq4wUazHjmCDBCqXF/d' $ZZZ
 
 # 修改内核版本为5.4
-sed -i 's/PATCHVER:=5.10/PATCHVER:=5.15/g' target/linux/x86/Makefile                          
+sed -i 's/PATCHVER:=5.10/PATCHVER:=6.1.1/g' target/linux/x86/Makefile                          
 
 # 修改内核版本为4.19
 #sed -i 's/PATCHVER:=5.4/PATCHVER:=4.19/g' target/linux/x86/Makefile  
